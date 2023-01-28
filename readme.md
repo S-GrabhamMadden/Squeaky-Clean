@@ -13,13 +13,13 @@ As part of a larger project to do with USV analysis, I put together a few algori
 **Running the Script**
 The noise reduction is done through a python script. With your USV audio files (in WAV format) in a directory, run the script with the following command:
 ```sh
-python scripts/SqueakyCleanUSVs.py dir/to/use
+python SqueakyCleanUSVs.py dir/to/use
 ```
 This will create a subdirectory with cleaned versions of each audio file separately. Feel free to examine the results and tweak parameters if necessary.
 
 By default, the bandpass filter starts to attenuate out below 34kHz and above 68kHz as this performed best for our files. You can change these values arbitrarily by running the script like this (in this example the filter attenuates below 25kHz and above 70kHz):
 ```sh
-python scripts/SqueakyCleanUSVs.py dir/to/use --bandpassLow 25000 --bandpassHigh 70000
+python SqueakyCleanUSVs.py dir/to/use --bandpassLow 25000 --bandpassHigh 70000
 ```
 
 ## Explanation
